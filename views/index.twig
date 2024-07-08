@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {{ titulo }}
+    </title>
+    <style>
+        .counter-container {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .counter {
+            font-size: 3rem;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bienvenido a Flor Natura - TWIG</h1>
+    <!-- Contador de visitas -->
+    <div class="counter-container">
+        <h1>Visitas al Sitio</h1>
+        <div class="counter">
+            <span>
+                {{ visitas }}
+            </span>
+        </div>
+    </div>
+    <div>
+        <h2>Lista de productos en stock</h2>
+        <p>Actualmente disponemos de {{ productos.length }} productos.</p> 
+        <ul>
+            {% for p in productos %}
+                <li>
+                    {{ p }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+
+</html>
