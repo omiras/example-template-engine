@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title= titulo
+    style.
+      .counter-container {
+          background: rgba(0, 0, 0, 0.5);
+          padding: 20px 40px;
+          border-radius: 10px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+      h1 {
+          font-size: 2rem;
+          margin-bottom: 10px;
+      }
+      .counter {
+          font-size: 3rem;
+          font-weight: bold;
+          padding: 10px 20px;
+          border: 2px solid #fff;
+          border-radius: 10px;
+      }
+  body
+    h1 Bienvenido a Flor Natura
+    .counter-container
+      h1 Visitas al Sitio
+      .counter
+        span= visitas
+    div
+      h2 Lista de productos en stock
+      p Actualmente disponemos de #{productos.length} productos.
+      ul
+        each p in productos
+          li= p
