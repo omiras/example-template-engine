@@ -11,7 +11,7 @@ const app = express();
 
 // Le vamos a decira  express que queremos usar el motor de plantillas EJS (que acabamos de instalar)
 // Por defecto todas las vistas se encuentran en la carpeta 'views'
-app.set('view engine', 'ejs');
+app.set('view engine', 'pug');
 
 app.get('/', (req, res) => {
     // Ponemos el nombre del fichero EJS que se encuentra dentro de la carpeta 'views'
